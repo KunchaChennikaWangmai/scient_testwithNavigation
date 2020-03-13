@@ -24,7 +24,10 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
   carousel_slider: ^1.3.1
+  url_launcher: ^5.4.2
   slimy_card: ^1.0.1
+  bubble_chart: ^0.2.0
+
 
 dev_dependencies:
   flutter_test:

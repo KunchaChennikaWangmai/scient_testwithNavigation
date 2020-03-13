@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class CarouselButton extends StatelessWidget {
-
-  CarouselButton({@required this.icon, @required this.name, @required this.onPressed});
+  CarouselButton(
+      {@required this.icon, @required this.name, @required this.onPressed});
 
   final IconData icon;
   final String name;
@@ -17,10 +17,12 @@ class CarouselButton extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
             Icon(
-              icon
+              icon,
+              color: Colors.brown,
             ),
             Text(
-              '$name'
+              '$name',
+              style: TextStyle(color: Colors.brown),
             )
           ],
         ),
@@ -28,4 +30,3 @@ class CarouselButton extends StatelessWidget {
     );
   }
 }
-
