@@ -27,11 +27,13 @@ dependencies:
   url_launcher: ^5.4.2
   slimy_card: ^1.0.1
   bubble_chart: ^0.2.0
+  animated_card: ^1.0.0+8
 
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  http: ^0.12.0+4
 
 
 # For information on the generic Dart part of this file, see the
@@ -47,7 +49,7 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/
+    - assets/images/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

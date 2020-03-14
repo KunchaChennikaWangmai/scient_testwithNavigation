@@ -15,48 +15,46 @@ _launchURL() async {
 
 Color selection = Colors.limeAccent[100];
 final root = BubbleNode.node(
-  padding: 15,
+  padding: 0,
   children: [
     BubbleNode.node(
+      padding: 5,
       options: BubbleOptions(
         color: Colors.amberAccent,
       ),
-      padding: 30,
       children: [
         BubbleNode.leaf(
-          options: BubbleOptions(
+            value: 20000,
+            options: BubbleOptions(
               color: Colors.amberAccent,
-              child: Container(
-                child: Text('Scient'),
-              )),
-          value: 4159,
-        ),
+            )),
       ],
     ),
     BubbleNode.leaf(
-      options: BubbleOptions(
-        color: Colors.amberAccent,
-      ),
-      value: 4159,
-    ),
+        value: 20000,
+        options: BubbleOptions(
+          color: Colors.amberAccent,
+        )),
     BubbleNode.leaf(
-      options: BubbleOptions(
-        color: Colors.amberAccent,
-      ),
-      value: 4000,
-    ),
+        value: 20000,
+        options: BubbleOptions(
+          color: Colors.amberAccent,
+        )),
     BubbleNode.leaf(
-      options: BubbleOptions(
-        color: Colors.amberAccent,
-      ),
-      value: 4000,
-    ),
+        value: 20000,
+        options: BubbleOptions(
+          color: Colors.amberAccent,
+        )),
     BubbleNode.leaf(
-      options: BubbleOptions(
-        color: Colors.amberAccent,
-      ),
-      value: 4000,
-    ),
+        value: 20000,
+        options: BubbleOptions(
+          color: Colors.amberAccent,
+        )),
+    BubbleNode.leaf(
+        value: 20000,
+        options: BubbleOptions(
+          color: Colors.amberAccent,
+        )),
   ],
 );
 
@@ -88,6 +86,20 @@ class _HomePageState extends State<HomePage> {
         name: "Projects",
         onPressed: () {
           Navigator.pushNamed(context, '/projects');
+        },
+      ),
+      CarouselButton(
+        icon: Icons.gavel,
+        name: "Faqs",
+        onPressed: () {
+          Navigator.pushNamed(context, '/faqs');
+        },
+      ),
+      CarouselButton(
+        icon: Icons.gavel,
+        name: "Tools",
+        onPressed: () {
+          Navigator.pushNamed(context, '/tools');
         },
       ),
       CarouselButton(
@@ -141,13 +153,6 @@ class _HomePageState extends State<HomePage> {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: <Widget>[
-                        Container(
-                          height: 400,
-                          width: 400,
-                          child: BubbleChartLayout(
-                            root: root,
-                          ),
-                        ),
                         CarouselSlider(
                           enlargeCenterPage: true,
                           autoPlay: true,
@@ -164,7 +169,8 @@ class _HomePageState extends State<HomePage> {
                                       borderRadius: BorderRadius.circular(5),
                                       color: Colors.amberAccent,
                                     ),
-                                    child: Image.asset(''));
+                                    child: Image.asset(
+                                        'assets/images/morning.jpeg'));
                               },
                             );
                           }).toList(),
@@ -202,9 +208,12 @@ class _HomePageState extends State<HomePage> {
                                         fontSize: 16, color: Colors.brown))),
                           ),
                         ),
-                        Divider(
-                          height: 50,
-                          thickness: 50,
+                        Container(
+                          height: 400,
+                          width: 400,
+                          child: BubbleChartLayout(
+                            root: root,
+                          ),
                         ),
                         CarouselSlider(
                           enlargeCenterPage: true,
@@ -215,25 +224,17 @@ class _HomePageState extends State<HomePage> {
                             return Builder(
                               builder: (BuildContext context) {
                                 return Container(
-                                    width: MediaQuery.of(context).size.width,
-                                    margin:
-                                        EdgeInsets.symmetric(horizontal: 5.0),
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(5),
-                                      color: Colors.amberAccent,
-                                    ),
-                                    child: Image.asset(''));
+                                  width: MediaQuery.of(context).size.width,
+                                  margin: EdgeInsets.symmetric(horizontal: 5.0),
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(5),
+                                    color: Colors.amberAccent,
+                                  ),
+                                  child: Text('Scient'),
+                                );
                               },
                             );
                           }).toList(),
-                        ),
-                        Divider(
-                          height: 100,
-                          thickness: 100,
-                        ),
-                        Divider(
-                          height: 100,
-                          thickness: 100,
                         ),
                       ],
                     ),
